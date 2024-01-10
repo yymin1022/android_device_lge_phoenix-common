@@ -51,7 +51,7 @@ on early-init
     chmod 0620 /dev/kmsg
     # Load WIGIG platform driver
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules msm_11ad_proxy
-    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.joan.hdmi.sh
+    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.phoenix.hdmi.sh
 
     # Workarround for cache
     rm /data/resource-cache

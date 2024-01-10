@@ -395,7 +395,7 @@ build_product=`getprop ro.build.product`
 sku_carrier=`getprop ro.boot.vendor.lge.sku_carrier`
 target_country=`getprop ro.vendor.lge.build.target_country`
 
-if [ "$product_name" = "joan_lao_com" ] || [ "$product_name" = "phoenix_lao_com" ]; then
+if [ "$product_name" = "phoenix_lao_com" ] || [ "$product_name" = "phoenix_lao_com" ]; then
     # add W for group recursively before delete
     chmod g+w -R /data/vendor/modem_config/*
     rm -rf /data/vendor/modem_config/*
@@ -422,7 +422,7 @@ if [ "$product_name" = "joan_lao_com" ] || [ "$product_name" = "phoenix_lao_com"
             cp --preserve=m -d /data/vendor/modem_config/mcfg_sw/dig_lge/phoe_glo.txt /data/vendor/modem_config/mcfg_sw/mbn_sw.txt
         fi
     fi
-elif [ "$build_product" = "joan" ]; then
+elif [ "$build_product" = "phoenix" ]; then
     chmod g+w -R /data/vendor/modem_config/*
     rm -rf /data/vendor/modem_config/*
     # preserve the read only mode for all subdir and files
@@ -433,10 +433,10 @@ elif [ "$build_product" = "joan" ]; then
     chown -hR system.system /data/vendor/modem_config
     chmod g+w -R /data/vendor/modem_config/*
 
-    if [ "$product_name" = "joan_nao_us" ] && [ "$lge_hydra" == "Renewal128" ]; then
+    if [ "$product_name" = "phoenix_nao_us" ] && [ "$lge_hydra" == "Renewal128" ]; then
         cp --preserve=m -d /data/vendor/modem_config/mcfg_sw/dig_lge/open_spr.dig /data/vendor/modem_config/mcfg_sw/mbn_sw.dig
         cp --preserve=m -d /data/vendor/modem_config/mcfg_sw/dig_lge/open_spr.txt /data/vendor/modem_config/mcfg_sw/mbn_sw.txt
-    elif [ "$product_name" = "joan_nao_us" ]; then
+    elif [ "$product_name" = "phoenix_nao_us" ]; then
         cp --preserve=m -d /data/vendor/modem_config/mcfg_sw/dig_lge/open_no.dig /data/vendor/modem_config/mcfg_sw/mbn_sw.dig
         cp --preserve=m -d /data/vendor/modem_config/mcfg_sw/dig_lge/open_no.txt /data/vendor/modem_config/mcfg_sw/mbn_sw.txt
     fi
