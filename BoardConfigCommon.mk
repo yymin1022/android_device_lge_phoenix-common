@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/lge/joan-common
+COMMON_PATH := device/lge/phoenix-common
 
 # inherit from the proprietary version
-include vendor/lge/joan-common/BoardConfigVendor.mk
+include vendor/lge/phoenix-common/BoardConfigVendor.mk
 
 # Platform
 TARGET_ARCH := arm64
@@ -159,7 +159,7 @@ TARGET_INIT_VENDOR_LIB := libinit_lge_msm8998
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_msm8998
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=joan user_debug=31 msm_rtb.filter=0x37
+BOARD_KERNEL_CMDLINE := androidboot.hardware=phoenix user_debug=31 msm_rtb.filter=0x37
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.configfs=true
@@ -170,7 +170,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/lge/msm8998
-TARGET_KERNEL_CONFIG := lineageos_joan_defconfig
+TARGET_KERNEL_CONFIG := lineageos_phoenix_defconfig
 TARGET_KERNEL_VERSION := 4.4
 TARGET_KERNEL_LLVM_BINUTILS := false
 
@@ -198,7 +198,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 
 # Recovery
 BOOTLOADER_MESSAGE_OFFSET := 128
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.joan
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.phoenix
 TARGET_RECOVERY_DENSITY := xxxhdpi
 
 # RIL

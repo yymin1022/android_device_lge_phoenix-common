@@ -20,7 +20,7 @@ import os
 import sys
 from hashlib import sha1
 
-device='joan-common'
+device='phoenix-common'
 vendor='lge'
 
 files = [

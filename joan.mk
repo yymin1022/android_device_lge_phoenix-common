@@ -1,4 +1,4 @@
-COMMON_PATH := device/lge/joan-common
+COMMON_PATH := device/lge/phoenix-common
 
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
@@ -223,7 +223,7 @@ PRODUCT_PACKAGES += \
     hw_vari.sh \
     init.baseband.sh \
     init.class_main.sh \
-    init.joan.hdmi.sh \
+    init.phoenix.hdmi.sh \
     init.lge.usb.lao.sh \
     init.qcom.class_core.sh \
     init.qcom.post_boot.sh \
@@ -245,8 +245,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.baseband.proxy.rc \
-    init.joan_vendor.rc \
-    init.joan.rc \
+    init.phoenix_vendor.rc \
+    init.phoenix.rc \
     init.lge.fingerprints.rc \
     init.lge.power.rc \
     init.lge.sensors.rc \
@@ -258,8 +258,8 @@ PRODUCT_PACKAGES += \
     init.target.rc
 
 PRODUCT_PACKAGES += \
-    fstab.joan \
-    ueventd.joan.rc
+    fstab.phoenix \
+    ueventd.phoenix.rc
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -372,7 +372,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/privapp-permissions-joan.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-joan.xml \
+    $(COMMON_PATH)/configs/privapp-permissions-phoenix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-phoenix.xml \
     $(COMMON_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Power
@@ -411,7 +411,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/recovery/root/init.recovery.joan.rc:root/init.recovery.joan.rc
+    $(COMMON_PATH)/recovery/root/init.recovery.phoenix.rc:root/init.recovery.phoenix.rc
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -432,7 +432,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(COMMON_PATH)/configs/sensors/sensor_def_common.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_common.conf \
-    $(COMMON_PATH)/configs/sensors/sensor_def_joan_global_com.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf
+    $(COMMON_PATH)/configs/sensors/sensor_def_phoenix_global_com.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf
 
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 25
@@ -454,7 +454,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.joan
+    vendor.lineage.touch@1.0-service.phoenix
 
 # TimeKeep
 PRODUCT_PACKAGES += \
@@ -515,4 +515,4 @@ PRODUCT_PACKAGES += \
 #    WfdCommon
 
 # Inherit proprietary blobs
-$(call inherit-product, vendor/lge/joan-common/joan-common-vendor.mk)
+$(call inherit-product, vendor/lge/phoenix-common/phoenix-common-vendor.mk)
